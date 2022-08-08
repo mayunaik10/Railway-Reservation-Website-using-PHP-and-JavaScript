@@ -1,0 +1,37 @@
+<html>
+<style>
+
+body {
+  font-family: 'monospace', monospace, san-serif;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background-image: url(https://innovate.mygov.in/wp-content/uploads/2016/09/indian-Railway.jpg);
+   background-size: cover;
+}
+</style>
+<script type="text/javascript">
+Banners = new Array('banner1.jpg','banner2.png','banner3.jpg','banner4.jpg'); // Declare image array
+CurrentBanner = 0; //index variable
+function DisplayBanners()
+{
+if (document.images)
+{
+CurrentBanner++;
+if (CurrentBanner == Banners.length)
+{
+CurrentBanner = 0
+}
+document.RotateBanner.src= Banners[CurrentBanner]
+setTimeout("DisplayBanners()",5000) 
+}
+}
+</script>
+
+<body>
+<body onload="DisplayBanners()"> 
+<center>
+<img src="banner1.jpg" width="500" height="400" name="RotateBanner" > 
+</center>
+</body>
+</html>
